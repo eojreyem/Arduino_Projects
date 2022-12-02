@@ -13,12 +13,10 @@ private:
     int light_pin;
     int number;
     int color;
-    // unsigned long currentMillis;
-    // unsigned long lastMillis;
 
 public:
     bool isIn = false;
-    Player( int, int, int);
+    Player(int, int, int);
     bool CheckPlayerIn();
     void lightOn();
     void lightOff();
@@ -49,13 +47,13 @@ void Player::lightOff()
 
 int Player::getColor()
 {
-  return(color);
+    return (color);
 }
 
 void Player::reset()
 {
-  isIn = false;
-  lightOn();
+    isIn = false;
+    lightOn();
 }
 
 bool Player::CheckPlayerIn()
@@ -66,11 +64,11 @@ bool Player::CheckPlayerIn()
         {
             isIn = true;
             lightOff();
-            return(isIn);
+            return (isIn);
         }
-        return(0);
+        return (0);
     }
-    return(0);
+    return (0);
 };
 
 #endif
